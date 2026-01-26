@@ -1,0 +1,32 @@
+{
+  "name": "aria2manager",
+  "version": "1.0.0",
+  "description": "Aria2 http(s) and torrent downloader",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --linux AppImage",
+    "dist": "electron-builder --dir"
+  },
+  "build": {
+    "appId": "com.mxaln.aria2manager",
+    "productName": "Aria2 Manager",
+    "linux": {
+      "target": "dir",
+      "icon": "app/512x512.png",
+      "category": "Internet"
+    },
+    "files": [
+      "**/*",
+      "!dist/*",
+      "!node_modules/*"
+    ]
+  },
+  "keywords": [],
+  "author": "mxaln",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^40.0.0",
+    "electron-builder": "^26.4.0"
+  }
+}
