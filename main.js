@@ -9,7 +9,7 @@ let ariaProcess;
 const ARIA_CONF = path.join(os.homedir(), '.aria2', 'aria2.conf');
 
 if (process.platform === 'linux') {
-  app.setDesktopName('aria2-manager.desktop');
+  app.setDesktopName('aria2manager.desktop');
 }
 
 function startAria2() {
@@ -31,7 +31,7 @@ function createWindow () {
   const mainWindow = new BrowserWindow({
     width: 1200,
     height: 800,
-    icon: path.join(__dirname, 'app', 'icon.png'),
+    icon: path.join(__dirname, 'icon.png'),
     webPreferences: {
       webSecurity: false,
       nodeIntegration: false,
@@ -41,7 +41,7 @@ function createWindow () {
     autoHideMenuBar: true
   });
 
-  mainWindow.loadFile(path.join(__dirname, 'app', 'index.html'));
+  mainWindow.loadFile(path.join(__dirname, 'build/index.html'));
 }
 
 app.whenReady().then(() => {
